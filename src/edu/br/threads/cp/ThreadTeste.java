@@ -1,13 +1,17 @@
 package edu.br.threads.cp;
 
+//declaração do executor para realizar os varios executes das threads
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+
 
 public class ThreadTeste {
 	
 	public static void main(String args[]){
 		
 		long  t = System.currentTimeMillis();
+		
+		//declaração das threads e divisão do valor em 10 threads
 		
 		Primos t1 = new Primos(2,100000);
 		Primos t2 = new Primos(100001,200000);
@@ -21,8 +25,11 @@ public class ThreadTeste {
 		Primos t10 = new Primos(900001,1000000);
 
 		System.out.println("Iniciando as Threads: ");
+		
+		//executor para gerenciar as várias threads criadas
 		ExecutorService threadExecutor = Executors.newFixedThreadPool(10);
 
+		//execute das threads
 		threadExecutor.execute(t1);
 		threadExecutor.execute(t2);
 		threadExecutor.execute(t3);

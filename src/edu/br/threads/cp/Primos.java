@@ -1,5 +1,7 @@
 package edu.br.threads.cp;
 
+//implementação da interface runnable para utilizar o metodo run()
+
 public class Primos implements Runnable{
 	private int min;
 	private int max;
@@ -20,6 +22,7 @@ public class Primos implements Runnable{
  public void run(){
 	 for(int i=min; i<=max;i++){
 		 if(prim(i)){
+			 
 			 //exibir os números
 			 //System.out.println(i);
 		 }
