@@ -9,6 +9,7 @@ public class ThreadTeste {
 	
 	public static void main(String args[]){
 		
+		//contagem do tempo
 		long  t = System.currentTimeMillis();
 		
 		//declaração das threads e divisão do valor em 10 threads
@@ -40,6 +41,7 @@ public class ThreadTeste {
 		threadExecutor.execute(t8);
 		threadExecutor.execute(t9);
 		threadExecutor.execute(t10);
+		
 		threadExecutor.shutdown();
  
 	System.out.println("\n    Tempo gasto: " + (System.currentTimeMillis() - t) + " ms");
